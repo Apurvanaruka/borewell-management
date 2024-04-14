@@ -13,12 +13,11 @@ def main():
     page = st.sidebar.radio('Go to', ['Register User', 'Add Data','Show user Data'])
     
     if page == 'Register User':
-        register_user(st)
+        register_user()
     elif page == 'Add Data':
-        add_data(st,)
-
+        add_data()
     elif page == 'Show user Data':
-        show_user_data(st)
+        show_user_data()
 
 if __name__ == '__main__':
     main()
