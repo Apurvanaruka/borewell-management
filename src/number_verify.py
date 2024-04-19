@@ -19,8 +19,6 @@ def generate_otp():
 
 # verify otp
 def verify_otp(entered_otp, expected_otp):
-    print(entered_otp, expected_otp)
-    print(type(entered_otp), type(expected_otp))
     return entered_otp == expected_otp
 
 # Function to send OTP via Twilio

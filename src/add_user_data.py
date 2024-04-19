@@ -15,7 +15,6 @@ def add_data():
     col1, col2 = st.columns(2)
     end_hour = col1.slider('Ending Hour',1,12,step=1)
     end_min = col2.slider('Ending Minutes',0,59,step=1)
-   # st.subheader(f'Total Time {end_hour-start_hour}:{end_min-start_min} hours')
     st.subheader(total_time(start_hour, start_min, end_hour, end_min))
     start_datetime = datetime.combine(date,datetime.strptime(f"{start_hour}:{start_min}", "%H:%M").time() )
     end_datetime = datetime.combine(date, datetime.strptime(f"{end_hour}:{end_min}", "%H:%M").time())
