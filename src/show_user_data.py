@@ -31,8 +31,7 @@ def show_user_data():
         df = pd.DataFrame({'Date':[], 'StartTime':[],'EndTime':[],'hours':[]})
         for i in range(len(date)):
             if selected_date == 'All':
-                df = pd.DataFrame({'Date':date, 'StartTime':start_time,'EndTime':end_time,'hours':20})
-                break
+                df = df._append({'Date':date[i], 'StartTime':start_time[i],'EndTime':end_time[i],'hours':get_hour(start_time[i],end_time[i])},ignore_index=True)
             elif date[i] == selected_date:
                 df = df._append({'Date':date[i], 'StartTime':start_time[i],'EndTime':end_time[i],'hours':get_hour(start_time[i],end_time[i])},ignore_index=True)
         st.write(df)
