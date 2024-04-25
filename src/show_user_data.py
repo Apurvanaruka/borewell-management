@@ -14,7 +14,7 @@ def show_user_data():
         col1.subheader(f'{user.full_name}')
         col1.write(f'Mobile Number: {user.mobile_number}')
         col2.selectbox('Crop Type',[user.crop_type])
-        user_data = session.query(UserData).filter(UserData.user_id == user.id).all()
+        user_data = session.query(UserData).filter(UserData.user_id == user.id,UserData.end_datetime != None).all()
         date = []
         start_time = []
         end_time = []
